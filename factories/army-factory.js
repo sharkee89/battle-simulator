@@ -3,11 +3,10 @@ const squadFactory = require('./squad-factory');
 const { getRandomInt } = require('../helpers/utils');
 
 module.exports = {
-    createArmies: (min, max) => {
-        let numOfArmies = getRandomInt(min, max);
+    createArmies: (numOfArmies) => {
         let armies = [];
         for (let i = 0; i < numOfArmies; i++) {
-            armies.push(new Army(squadFactory.createSquads(2, 2)));
+            armies.push(new Army(squadFactory.createSquads(process.env.NUM_OF_SQUADS), JSON.parse(process.env.ATTACK_STRATEGIES)[i]));
         }
         return armies;
     }

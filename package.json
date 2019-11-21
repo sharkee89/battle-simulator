@@ -1,0 +1,22 @@
+{
+  "name": "battle-simulation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharkee89/battle-simulator.git"
+  },
+  "author": "Stefan Nikolic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sharkee89/battle-simulator/issues"
+  },
+  "homepage": "https://github.com/sharkee89/battle-simulator#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}

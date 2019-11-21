@@ -3,8 +3,7 @@ const Vehicle = require('../models/vehicle');
 const { getRandomInt } = require('../helpers/utils');
 
 module.exports = {
-    createUnits: (min, max) => {
-        let numOfUnits = getRandomInt(min, max);
+    createUnits: (numOfUnits) => {
         let army = [];
         for (let i = 0; i < numOfUnits; i++) {
             army.push(createUnit(getRandomInt(0, 1)));
