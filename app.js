@@ -1,14 +1,7 @@
-const util = require('util')
-
-const Unit = require('./models/unit');
-const Soldier = require('./models/soldier');
-const Vehicle = require('./models/vehicle');
 const armyFactory = require('./factories/army-factory');
+const battleManager = require('./managers/battle-manager');
 
-let armies = armyFactory.createArmies(process.env.NUM_OF_ARMIES);
-armies.forEach((army, index) => {
-    console.log('-----------------------');
-    console.log(`$$$ Army ${index + 1} $$$`);
-    console.log(util.inspect(army, {showHidden: false, depth: null}));
-    console.log('-----------------------');
-})
+let squads = armyFactory.createArmies(process.env.NUM_OF_ARMIES);
+squads = squads.reduce((a, b) => [...a, ...b], []);
+
+battleManager.startBattle(squads);

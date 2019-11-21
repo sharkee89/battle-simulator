@@ -4,11 +4,16 @@ const { getRandomInt } = require('../helpers/utils');
 
 module.exports = {
     createUnits: (numOfUnits) => {
-        let army = [];
-        for (let i = 0; i < numOfUnits; i++) {
-            army.push(createUnit(getRandomInt(0, 1)));
+        let res = {
+            units: [],
+            maxCharge: 0
         }
-        return army;
+        for (let i = 0; i < numOfUnits; i++) {
+            let unit = createUnit(getRandomInt(0, 1));
+            res.units.push(unit);
+            res.maxCharge = unit.recharge > res.maxCharge ? unit.recharge : res.maxCharge;
+        }
+        return res;
     }
 }
 createUnit = (descision) => {
