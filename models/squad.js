@@ -9,15 +9,6 @@ module.exports = class Squad {
         this.army = army;
         this.attackStrategy = attackStrategy;
     }
-    getName() {
-        return this.name;
-    }
-    getUnits() {
-        return this.units;
-    }
-    getRecharge() {
-        return this.recharge;
-    }
     set charged(charged) {
         this._charged = charged;
     }

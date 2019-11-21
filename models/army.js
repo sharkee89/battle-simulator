@@ -5,10 +5,4 @@ module.exports = class Army {
         this.squads = squads;
         this.attackStrategy = attackStrategy;
     }
-    getSquads() {
-        return this.squads;
-    }
-    getAttackStrategy() {
-        return this.attackStrategy;
-    }
 }

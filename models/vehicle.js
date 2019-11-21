@@ -12,7 +12,4 @@ module.exports = class Vehicle extends Unit {
         super(initHealth, recharge);
         this.operators = operators;
     }
-    getOperators() {
-        return this.operators;
-    }
 }

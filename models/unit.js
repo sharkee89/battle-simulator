@@ -3,10 +3,4 @@ module.exports = class Unit {
         this.health = health;
         this.recharge = recharge;
     }
-    getHealth() {
-        return this.health;
-    }
-    getRecharge() {
-        return this.recharge;
-    }
 }
