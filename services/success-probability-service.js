@@ -14,11 +14,11 @@ module.exports = {
                 successProbabilities.push(calculateSuccessProbabilityOfVehicle(unit));
             }
         });
-        let SquadSP = 0
+        let SquadSP;
         if (successProbabilities.length) {
             SquadSP = gmean(successProbabilities);
         }
-        return SquadSP;
+        return isNaN(SquadSP) ? 0 : SquadSP;
     }
 }
 calculateSuccessProbabilityOfSoldier = (soldier) => {
