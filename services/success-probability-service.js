@@ -14,7 +14,10 @@ module.exports = {
                 successProbabilities.push(calculateSuccessProbabilityOfVehicle(unit));
             }
         });
-        let SquadSP = gmean(successProbabilities)
+        let SquadSP = 0
+        if (successProbabilities.length) {
+            SquadSP = gmean(successProbabilities);
+        }
         return SquadSP;
     }
 }

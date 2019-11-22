@@ -17,3 +17,9 @@ Dependencies will be installed in ```node_modules``` folder.
 Run ```node bin/dev```
 
 Application will start battle simulation, just follow the logs and you will see the result of the battle.
+
+## Run test
+
+Run ```npm run test```
+
+Application will start unit tests.

@@ -62,3 +62,9 @@ dealDamageToVehicle = (damage, vehicle) => {
         vehicle.health -= damage * 0.7;
     }
 }
+
+module.exports.calculateDamage = this.calculateDamage;
+module.exports.calculateDamageOfSoldier = calculateDamageOfSoldier;
+module.exports.calculateDamageOfVehicle = calculateDamageOfVehicle;
+module.exports.dealDamageToDefender = dealDamageToDefender;
+module.exports.dealDamageToVehicle = dealDamageToVehicle;

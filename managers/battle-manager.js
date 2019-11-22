@@ -12,6 +12,7 @@ emitter.on('squad_attack', (squadAttacker, squads) => {
     let possibleDefenders = squads.filter(squad => squad.army !== squadAttacker.army);
     let squadDefender = getDefender(squadAttacker, possibleDefenders);
     if (squadDefender) {
+        console.log('__________________________________');
         console.log(`${squadAttacker.name} is attacking ${squadDefender.name} with ${squadAttacker.attackStrategy} strategy.`);
         battle(squadAttacker, squadDefender, squads);
     } else {
@@ -58,6 +59,7 @@ battle = (attacker, defender, squads) => {
         console.log('Defender wins, nothing is happening.');
         emitter.emit('squad_charge', attacker, squads);
     }
+    console.log('__________________________________');
 }
 checkDefenderLife = (defender) => {
     let units = [];
@@ -95,13 +97,15 @@ getDefender = (squadAttacker, possibleDefenders) => {
 }
 win = (winner, squads) => {
     console.log(util.inspect(squads, {showHidden: false, depth: null}));
-    console.log('++++++++++++++++++++++++++++++++++');
-    console.log('**********************************');
-    console.log('----------------------------------');
-    console.log(`~~~~~~~~~WINNER IS ${winner.army}~~~~~~~~~`)
-    console.log('----------------------------------');
-    console.log('**********************************');
-    console.log('++++++++++++++++++++++++++++++++++');
+    console.log('__________________________________');
+    console.log('|                                |');
+    console.log('|                                |');
+    console.log('|                                |');
+    console.log(`|        WINNER IS ${winner.army.toUpperCase()}        |`)
+    console.log('|                                |');
+    console.log('|                                |');
+    console.log('|                                |');
+    console.log('__________________________________');
     emitter.removeAllListeners('squad_attack');
     emitter.removeAllListeners('squad_charge');
 }

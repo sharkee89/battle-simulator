@@ -1,5 +1,3 @@
-const Unit = require('./unit');
-
 module.exports = class Squad {
     constructor(name, units, recharge, charged, army, attackStrategy) {
         this.name = name;
