@@ -21,7 +21,7 @@
     "dotenv": "^8.2.0"
   },
   "devDependencies": {
-    "mocha": "^6.2.2",
+    "mocha": "^10.2.0",
     "sinon": "^7.5.0"
   }
 }
